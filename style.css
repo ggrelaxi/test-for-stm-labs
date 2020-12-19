@@ -1,0 +1,162 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed,
+   figure, figcaption, footer, header, hgroup,
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+       margin: 0;
+       padding: 0;
+       border: 0;
+       font-size: 100%;
+       font: inherit;
+       vertical-align: baseline;
+   }
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure,
+   footer, header, hgroup, menu, nav, section {
+       display: block;
+   }
+   body {
+       line-height: 1;
+   }
+   ol, ul {
+       list-style: none;
+   }
+   blockquote, q {
+       quotes: none;
+   }
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+       content: '';
+       content: none;
+   }
+   table {
+       border-collapse: collapse;
+       border-spacing: 0;
+   }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    max-width: 1024px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.usersList {
+    min-width: 600px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 600px;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.usersList h2 {
+    font-size: 40px;
+    margin: 20px 0px;
+}
+
+.usersList label {
+    padding: 20px 0px;
+    display: block;
+}
+
+.usersList input {
+    padding: 15px;
+    width: 33%;
+}
+
+.usersList button {
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.users {
+    padding: 20px 0px;
+}
+
+.progressBlock {
+    display: flex;
+    align-items: center;
+}
+
+.error {
+    color: red;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    border: 3px solid black;
+    border-top-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.users table {
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.users table th,
+.users table td {
+    border: 1px solid #000;
+    padding: 15px 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.users table th {
+    font-weight: bold;
+    padding: 35px 0;
+}
+
+.users table tbody tr:nth-child(odd) {
+    background-color: rgb(242, 242, 242);
+}
+
+.users table .img-container {
+    position: relative;
+}
+
+.users table .img-container .full {
+    display: none;
+}
+
+.users table .img-container img:hover ~ .full {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: -70px;
+    left: 50px;
+}
